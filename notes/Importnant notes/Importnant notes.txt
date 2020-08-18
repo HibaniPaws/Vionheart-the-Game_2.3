@@ -1,0 +1,14 @@
+Player:
+
+CurrentState = The State of the Player is in, such as Idle, Moving or being in Water. this variable are in String.
+	CurrentState Strings: "Idle", "Moving", "In Water", "Inventory Mode".
+	
+CombatState = The State where an enemy is near the player, state = "In Combat" if so. Invisible enemies do not trigger this. this variable are in String.
+	CombatState Strings: "Passive", "In Combat".
+	
+OnTile = The Tile that the player is standing on, controlled by TileRegister() script. this script returns a Tile Data.
+
+LastDirection = The last direction the player moved before going idle. it is also the player's current direction, this variable are in String.
+	LastDirection Strings: "Left", "Right, "Up", "Down".
+	
+BaseStats(...) = This script sets the stats of a player or NPC, giving them their Max Strength, Arcane and Agility.
