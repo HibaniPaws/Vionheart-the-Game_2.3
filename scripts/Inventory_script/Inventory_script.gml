@@ -1,3 +1,6 @@
+//Script played inside PLAYER parent object, gets key_Cast or key_Item input.
+//Input is in array (0-6) for key_Item. (0-4) for key_Cast.
+
 function Inventory_script() {
 
 
