@@ -144,6 +144,6 @@ if (DEVELOPER_MODE)
 	if (keyboard_check_pressed(vk_f3)) {DEBUG_SHOW = !DEBUG_SHOW};
 
 
-
+	if (keyboard_check_pressed(vk_backspace)) {game_restart()};
 }
 #endregion
