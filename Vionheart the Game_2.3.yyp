@@ -20,7 +20,7 @@
     {"id":{"name":"spr_Wand1","path":"sprites/spr_Wand1/spr_Wand1.yy",},"order":2,},
     {"id":{"name":"spr_Fireball","path":"sprites/spr_Fireball/spr_Fireball.yy",},"order":0,},
     {"id":{"name":"spr_Dash","path":"sprites/spr_Dash/spr_Dash.yy",},"order":1,},
-    {"id":{"name":"Window_Captions","path":"scripts/Window_Captions/Window_Captions.yy",},"order":14,},
+    {"id":{"name":"Window_Captions","path":"scripts/Window_Captions/Window_Captions.yy",},"order":3,},
     {"id":{"name":"sprite_Tileset_19","path":"sprites/sprite_Tileset_19/sprite_Tileset_19.yy",},"order":0,},
     {"id":{"name":"spr_CameraDEBUG","path":"sprites/spr_CameraDEBUG/spr_CameraDEBUG.yy",},"order":0,},
     {"id":{"name":"spr_CameraToDEBUG","path":"sprites/spr_CameraToDEBUG/spr_CameraToDEBUG.yy",},"order":1,},
