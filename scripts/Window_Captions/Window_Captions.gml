@@ -16,5 +16,6 @@ function Window_Captions(){
 	WindowCaption[11] = "Vionheart: the Game | Cooler than ice";
 	WindowCaption[12] = "[INSERT MAPLE QUOTE HERE]";
 	WindowCaption[13] = "Vionheart: the Game | . . .";
+	WindowCaption[14] = "Vionheart: the Game | Gee GitHub and GMS2!";
 	
 }
