@@ -6,7 +6,7 @@
     "path": "Vionheart the Game_2.3.yyp",
   },
   "resourceVersion": "1.0",
-  "name": "Window_Captions",
+  "name": "ItemList",
   "tags": [],
   "resourceType": "GMScript",
 }
