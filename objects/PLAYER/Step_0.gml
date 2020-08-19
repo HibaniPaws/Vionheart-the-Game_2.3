@@ -122,6 +122,12 @@ switch (OnTile)
 
 #endregion
 
+#region Music
+
+if (CombatState == "Passive") {};
+
+#endregion
+
 #region Animation
 
 	image_alpha = 1;
