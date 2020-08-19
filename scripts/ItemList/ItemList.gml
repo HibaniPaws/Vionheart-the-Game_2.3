@@ -6,7 +6,8 @@ enum item
 	none,
 	dagger1,
 	sword1,
-	wand1
+	wand1,
+	heal1
 
 }
 
