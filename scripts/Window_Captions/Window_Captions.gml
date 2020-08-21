@@ -28,5 +28,11 @@ function Window_Captions(){
 	WindowCaption[23] = "Vionheart: the Game | Cheeseburjer";
 	WindowCaption[24] = "Maple: the Game | Charismancy and Seductionesis";
 	WindowCaption[25] = "You think you're safe as you type this caption? I work in mysterious ways- I work behind your knowledge.";
+	WindowCaption[26] = "Vionheart: the Game | Now with Music!";
+	WindowCaption[27] = "Vionheart: the Game | Thank you, Tem. Very cool!";
+	WindowCaption[28] = "Vionheart: the Game | Thank you, CalculatinGenius. Very cool!";
+	WindowCaption[29] = "Vionheart: the Game | The Inventory Theme is creepy";
+	WindowCaption[30] = "Vionheart: the Game | 8 is the coolest number!";
+	WindowCaption[31] = "Vionheart: the Game | 32"
 		
 }

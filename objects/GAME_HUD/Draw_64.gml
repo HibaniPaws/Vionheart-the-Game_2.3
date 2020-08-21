@@ -5,6 +5,7 @@ var Margin=40;
 var Top_Stack=72;
 var Bottom_Stack=(global.max_H);
 var Right_Stack=(global.max_W);
+
 draw_set_font(font_Text);
 draw_set_alpha(1);
 
@@ -110,6 +111,18 @@ draw_text(global.max_W-Margin,global.max_H*0.50 + Margin,"Inventory");
 #endregion
 
 #region Debug Screen
+
+if (DEVELOPER_MODE) //Show if Build is in DEVELOPER mode
+{
+	draw_set_halign(fa_right);
+	draw_set_valign(fa_bottom);
+	draw_set_font(font_Text);
+	draw_set_color(c_white);
+	
+	draw_text(global.max_W,global.max_H,"DEVELOPER BUILD");
+	//draw_text(global.max_W,global.max_H - 32,"Music!"); //Text above Developer Build
+}
+
 if (Player.DEBUG_SHOW)
 {
 	
@@ -128,7 +141,14 @@ if (Player.DEBUG_SHOW)
 	
 	//Camera Position State
 	draw_text(Margin,Bottom_Stack-(72*4),"Camera Position Status:");
-	draw_text(Margin*8,Bottom_Stack-(72*4),global.CameraPosition.PositionState);
+	draw_text(Margin*8.25,Bottom_Stack-(72*4),global.CameraPosition.PositionState);
+	
+	//Show currently playing music.
+	
+	var PlayingMusic = audio_get_name(global.Music); //Get current music name
+	
+	draw_text(Margin,Bottom_Stack-(72*5),"Playing Music:");
+	draw_text(Margin*5.25,Bottom_Stack-(72*5),PlayingMusic);
 	
 	//FPS
 	draw_set_halign(fa_right);
@@ -149,7 +169,10 @@ if (Player.DEBUG_SHOW)
 	if (Player.key_ItemHeld[6]) draw_circle(X_InventorySlot[6],Y_InventorySlot[6],16,false);
 	
 	//Show loaded items
-	draw_text(Right_Stack-(Margin*2),Top_Stack*2,Player.Inventory.LoadItem);
+	//draw_text(Right_Stack-(Margin*2),Top_Stack*2,Player.Inventory.LoadItem); >>X: This is redundant now with the new inventory/item list system you're making, Alex!
+	
+
+	
 	
 }
 #endregion

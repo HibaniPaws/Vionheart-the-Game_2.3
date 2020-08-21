@@ -21,34 +21,13 @@ switch(PositionState)
 	case "Passive":
 		{
 			PositionX = Player.x; PositionY = Player.y; //Default / Failsafe
-		if (Player.CurrentState == "Moving") PositionX = Player.x + (Player.MoveX*48); PositionY = Player.y + (Player.MoveY*48);
-		if (Player.CurrentState == "Idle") PositionX += (Player.x - x) / 20; PositionY += (Player.y - y) / 20;
-		if (Player.CurrentState == "Inventory Mode") PositionX = Player.x + 64; PositionY = Player.y;
+		if (Player.CurrentState == "Moving") {PositionX = Player.x + (Player.MoveX*48); PositionY = Player.y + (Player.MoveY*48);}
+		if (Player.CurrentState == "Idle") {PositionX += (Player.x - x) / 20; PositionY += (Player.y - y) / 20;}
+		if (Player.CurrentState == "Inventory Mode") {PositionX = Player.x + 64; PositionY = Player.y;}
 		break;
 		}
 	case "Combat": {PositionX = Player.x; PositionY = Player.y; break;}
 }
-
-//switch (Player.CurrentState)
-//{
-//	case "Moving":
-//		switch(PositionState)
-//		{
-//			case "Passive": {PositionX = Player.x + (Player.MoveX*48); PositionY = Player.y + (Player.MoveY*48); break;}
-//			case "Combat": {PositionX = x; PositionY = y; break;}
-//		}
-		
-//	break;
-	
-//	case "Idle":
-//		switch(PositionState)
-//		{
-//			case "Passive": {PositionX += (Player.x - x) / 20; PositionY += (Player.y - y) / 20; break;}
-//			case "Combat": {PositionX = Player.x; PositionY = Player.y; break;}
-//		}
-//	break;
-	
-//}
 
 x = PositionX;
 y = PositionY;

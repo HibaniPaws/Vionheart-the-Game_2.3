@@ -45,23 +45,31 @@ CombatAlert = false;
 CombatState = false;
 ShowInventory = false;
 #endregion
-#region MISSING ANIMATION SPRITES
+#region Default variables if Missing.
 
-COMBATDOWN = spr_AnimationIsMissing;
-COMBATNEUTRAL = spr_AnimationIsMissing;
-COMBATUP = spr_AnimationIsMissing;
+	#region Default Animation Variables
+	COMBATDOWN = spr_AnimationIsMissing;
+	COMBATNEUTRAL = spr_AnimationIsMissing;
+	COMBATUP = spr_AnimationIsMissing;
 
-USEDOWN = spr_AnimationIsMissing;
-USENEUTRAL = spr_AnimationIsMissing;
-USEUP = spr_AnimationIsMissing;
+	USEDOWN = spr_AnimationIsMissing;
+	USENEUTRAL = spr_AnimationIsMissing;
+	USEUP = spr_AnimationIsMissing;
 
-PASSIVEDOWN = spr_AnimationIsMissing;
-PASSIVENEUTRAL = spr_AnimationIsMissing;
-PASSIVEUP = spr_AnimationIsMissing;
+	PASSIVEDOWN = spr_AnimationIsMissing;
+	PASSIVENEUTRAL = spr_AnimationIsMissing;
+	PASSIVEUP = spr_AnimationIsMissing;
 
-WALKDOWN = spr_AnimationIsMissing;
-WALKNEUTRAL = spr_AnimationIsMissing;
-WALKUP = spr_AnimationIsMissing;
+	WALKDOWN = spr_AnimationIsMissing;
+	WALKNEUTRAL = spr_AnimationIsMissing;
+	WALKUP = spr_AnimationIsMissing;
+	#endregion
+
+	#region Default Music Variables
+	PassiveTheme = Tem_vtg_overworld_theme;
+	InventoryTheme = Tem_VTG___Cave_Theme;
+	CombatTheme = Genus_boss_battle_1;
+	#endregion
 
 #endregion
 

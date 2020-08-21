@@ -123,9 +123,25 @@ switch (OnTile)
 #endregion
 
 #region Music
+	//Only ONE state must be active for music to be played if called.
+	//Meaning CombatState == "Passive" and CurrentState == "Inventory Mode" cannot play music because Passive CombatState and Idle CurrentState stack with eachother.
+	//Music being played is prioritized from Bottom to Top.
+	
+		if (CombatState == "Passive")
+		{
+			if (CurrentState == "Inventory Mode") {ChangeMusic(InventoryTheme,200);}
+			else {ChangeMusic(PassiveTheme,750);}
+		}
+		
+		if (CombatState == "In Combat")
+		{
+			ChangeMusic(CombatTheme,400);
+		}
+		
+	//>> X: Can be translated into a Switch statement.
+	//>> X: ~~Music can be set as variables, each character (obj_Red), as an example, can have their own special themes!~~ Variables are set.
 
-if (CombatState == "Passive") {};
-
+	
 #endregion
 
 #region Animation

@@ -19,7 +19,17 @@ global.Timescale = 1;
 
 #region Music
 
+//audio_group_load(background_music);
+
 global.Music = noone;
 global.MusicVolume = 1;
+global.PlayNextMusic = true;
+
+
+
+
+//ChangeMusic(Tem_VTG___Cave_Theme);
+
+
 
 #endregion

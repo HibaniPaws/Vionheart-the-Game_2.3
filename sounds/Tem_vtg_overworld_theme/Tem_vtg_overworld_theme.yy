@@ -1,15 +1,17 @@
 {
-  "name": "Tem_vtg_overworld_theme",
-  "compression": 1,
-  "type": 1,
-  "sampleRate": 44100,
-  "bitDepth": 0,
-  "bitRate": 128,
+  "ConfigValues": {
+    "Developer": {"audioGroupId":"{\"name\":\"audiogroup_default\",\"path\":\"audiogroups/audiogroup_default\"}",},
+  },
+  "compression": 0,
   "volume": 1.0,
   "preload": false,
+  "bitRate": 128,
+  "sampleRate": 44100,
+  "type": 1,
+  "bitDepth": 0,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "background_music",
+    "path": "audiogroups/background_music",
   },
   "soundFile": "Tem_vtg_overworld_theme.wav",
   "duration": 55.99992,
@@ -18,6 +20,9 @@
     "path": "folders/Music.yy",
   },
   "resourceVersion": "1.0",
-  "tags": [],
+  "name": "Tem_vtg_overworld_theme",
+  "tags": [
+    "Background_Music",
+  ],
   "resourceType": "GMSound",
 }
