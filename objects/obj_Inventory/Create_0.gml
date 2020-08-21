@@ -22,3 +22,7 @@
 	//ItemAmount = array_length_1d(ItemID);
 	//Item = ds_grid_create(WeaponProperties.height,ItemAmount);
 #endregion
+
+scr_add_weapon(ItemId.sword, 0, 0, 0, 0, 0, 0)// "sword1", "number one", "0.5 sec", 0, 0, 0)
+//scr_add_weapon(ItemId.dagger, "dagger1", "description", "0.05 sec", 0, 0, 0)
+//scr_add_weapon(ItemId.wand, "wand1", "another description", "one hit is enough, so..", 0, 0, 0)

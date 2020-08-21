@@ -66,7 +66,7 @@
   "copyToTargets": -1,
   "parent": {
     "name": "Extensions",
-    "path": "folders/Extensions.yy",
+    "path": "folders/Animation Curves/Extensions.yy",
   },
   "resourceVersion": "1.0",
   "name": "Essential_Scripts",

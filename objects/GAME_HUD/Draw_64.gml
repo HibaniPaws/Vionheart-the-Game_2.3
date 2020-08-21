@@ -1,10 +1,6 @@
 /// @description Draw HUD on screen
 
 display_set_gui_size(global.max_W,global.max_H);
-var Margin=40;
-var Top_Stack=72;
-var Bottom_Stack=(global.max_H);
-var Right_Stack=(global.max_W);
 draw_set_font(font_Text);
 draw_set_alpha(1);
 
@@ -98,13 +94,21 @@ draw_set_alpha(Box_Alpha);
 
 
 //Draw Rectangle background for Inventory
-draw_rectangle(global.max_W*0.5,0+Margin,global.max_W-Margin,global.max_H-Margin,false);
+draw_rectangle(inv_window_x0,0+inv_window_y0,inv_window_x1,inv_window_y1,false);
 
 draw_set_halign(fa_left); draw_set_valign(fa_top); draw_set_color(c_white); draw_set_alpha(1);
 draw_text(global.max_W*0.5+8,0+Margin,global.Player_Name);
 draw_set_halign(fa_right);
 draw_text(global.max_W-Margin,0+Margin,"Casts");
-draw_text(global.max_W-Margin,global.max_H*0.50 + Margin,"Inventory");
+draw_text(inv_label_x, inv_label_y, "Inventory");
+
+for (var i = 0; i < item_grid_w; ++i) {
+    
+	for (var j = 0; j < item_grid_h; ++j) {
+		
+	    draw_sprite(item_cell_spr, 0, item_grid_x + i*item_cell_delta, item_grid_y + j*item_cell_delta)
+	}
+}
 
 }
 #endregion
