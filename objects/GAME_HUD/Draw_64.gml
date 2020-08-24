@@ -109,8 +109,11 @@ for (var i = 0; i < item_grid_w; ++i) {
 		var xx = item_grid_x + j*item_cell_delta
 		var yy = item_grid_y + i*item_cell_delta
 		var item_id = obj_Inventory.player_inventory[# i*item_grid_w + j, 0]
+		var pointer_x = item_grid_x + pointer_j * item_cell_delta
+		var pointer_y = item_grid_y + pointer_i * item_cell_delta
 		
 	    draw_sprite(item_cell_spr, 0, xx, yy)
+		draw_sprite(cell_highlight_spr, 0, pointer_x, pointer_y)
 		draw_sprite(spr_items, item_id, xx, yy)
 	}
 }
