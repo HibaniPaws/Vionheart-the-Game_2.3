@@ -23,6 +23,6 @@
 	//Item = ds_grid_create(WeaponProperties.height,ItemAmount);
 #endregion
 
-scr_add_weapon(ItemId.sword, 0, 0, 0, 0, 0, 0)// "sword1", "number one", "0.5 sec", 0, 0, 0)
-scr_add_weapon(ItemId.dagger, 0, 0, 0, 0, 0, 0)
-scr_add_weapon(ItemId.wand, 0, 0, 0, 0, 0, 0)
+scr_add_weapon("sword1", ItemId.sword, "number one", "0.5 sec", 0, 0, 0)
+scr_add_weapon("dagger1", ItemId.dagger, "number one", "0.5 sec", 0, 0, 0)
+scr_add_weapon("wand1", ItemId.wand, 0, 0, 0, 0, 0)
