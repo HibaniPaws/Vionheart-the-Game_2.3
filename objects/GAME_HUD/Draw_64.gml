@@ -113,7 +113,7 @@ for (var i = 0; i < item_grid_w; ++i) {
 		var pointer_y = item_grid_y + pointer_i * item_cell_delta
 		
 	    draw_sprite(item_cell_spr, 0, xx, yy)
-		draw_sprite(cell_highlight_spr, 0, pointer_x, pointer_y)
+		draw_sprite_ext(cell_highlight_spr, 0, pointer_x, pointer_y, 1, 1, 0, c_white, 0.3)
 		draw_sprite(spr_items, item_id, xx, yy)
 	}
 }
