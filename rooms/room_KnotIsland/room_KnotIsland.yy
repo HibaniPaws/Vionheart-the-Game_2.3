@@ -16,7 +16,6 @@
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_Red","path":"objects/obj_Red/obj_Red.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":336.0,"y":560.0,"resourceVersion":"1.0","name":"inst_28597F84","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"GAME_CONTROLLER","path":"objects/GAME_CONTROLLER/GAME_CONTROLLER.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":784.0,"y":784.0,"resourceVersion":"1.0","name":"inst_25676FEF","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"GLOBALS","path":"objects/GLOBALS/GLOBALS.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":-16.0,"y":240.0,"resourceVersion":"1.0","name":"inst_152F426","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"tilesetId":{"name":"tileset_Basic","path":"tilesets/tileset_Basic/tileset_Basic.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":50,"SerialiseHeight":50,"TileSerialiseData":[
 13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,
@@ -76,7 +75,6 @@
   "creationCodeFile": "${project_dir}/rooms/room_KnotIsland/RoomCreationCode.gml",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_152F426","path":"rooms/room_KnotIsland/room_KnotIsland.yy",},
     {"name":"inst_25676FEF","path":"rooms/room_KnotIsland/room_KnotIsland.yy",},
     {"name":"inst_28597F84","path":"rooms/room_KnotIsland/room_KnotIsland.yy",},
   ],

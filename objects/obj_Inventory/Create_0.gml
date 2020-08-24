@@ -1,28 +1,23 @@
-/// @description
-#region Trashed code
-	//enum ItemType
-	//{
-	//	weapon,
-	//	item,
-	//	passive
-	//}
 
-	//enum WeaponProperties
-	//{
-	//	use_time,
-	//	backswing,
-	//	range,
-	//	height = 3
-	//}
+var function _add_item(item_id, num) {
+	
+	for (var i = 0; i < global.inventory_size; i++) {
+	    
+		if !player_inventory[# i, 0] {
+			player_inventory[# i, 0] = item_id
+			player_inventory[# i, 1] = num
+			return true
+		}
+	}
+	return false
+}
 
-	//ItemID[0] = "Dagger1";
-	//ItemID[1] = "Sword1";
-	//ItemID[2] = "Wand1";
+player_inventory = ds_grid_create(global.inventory_size, 2)
 
-	//ItemAmount = array_length_1d(ItemID);
-	//Item = ds_grid_create(WeaponProperties.height,ItemAmount);
-#endregion
+scr_add_item_info(Item.sword1, Item_type.sword, "sword1", "number one", 0)
+scr_add_item_info(Item.dagger1, Item_type.dagger, "dagger", "no mercy", 0)
+scr_add_item_info(Item.wand1, Item_type.wand, "whoa magic", "pew pew", 0)
+scr_add_item_info(Item.heal1, Item_type.consumable, "almost as healthy as fresh milk", "mmmm...", 0)
 
-scr_add_weapon("sword1", ItemId.sword, "number one", "0.5 sec", 0, 0, 0)
-scr_add_weapon("dagger1", ItemId.dagger, "number one", "0.5 sec", 0, 0, 0)
-scr_add_weapon("wand1", ItemId.wand, 0, 0, 0, 0, 0)
+_add_item(Item.dagger1, 1)
+_add_item(Item.sword1, 1)

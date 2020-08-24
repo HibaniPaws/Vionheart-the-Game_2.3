@@ -106,7 +106,12 @@ for (var i = 0; i < item_grid_w; ++i) {
     
 	for (var j = 0; j < item_grid_h; ++j) {
 		
-	    draw_sprite(item_cell_spr, 0, item_grid_x + i*item_cell_delta, item_grid_y + j*item_cell_delta)
+		var xx = item_grid_x + j*item_cell_delta
+		var yy = item_grid_y + i*item_cell_delta
+		var item_id = obj_Inventory.player_inventory[# i*item_grid_w + j, 0]
+		
+	    draw_sprite(item_cell_spr, 0, xx, yy)
+		draw_sprite(spr_items, item_id, xx, yy)
 	}
 }
 

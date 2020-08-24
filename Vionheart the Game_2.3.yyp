@@ -74,7 +74,6 @@
     {"id":{"name":"shd_scanlines","path":"shaders/shd_scanlines/shd_scanlines.yy",},"order":10,},
     {"id":{"name":"shd_sepia","path":"shaders/shd_sepia/shd_sepia.yy",},"order":11,},
     {"id":{"name":"shd_shockwave","path":"shaders/shd_shockwave/shd_shockwave.yy",},"order":12,},
-    {"id":{"name":"GLOBALS","path":"objects/GLOBALS/GLOBALS.yy",},"order":5,},
     {"id":{"name":"shd_sketch","path":"shaders/shd_sketch/shd_sketch.yy",},"order":13,},
     {"id":{"name":"shd_thermal","path":"shaders/shd_thermal/shd_thermal.yy",},"order":14,},
     {"id":{"name":"shd_wave","path":"shaders/shd_wave/shd_wave.yy",},"order":15,},
