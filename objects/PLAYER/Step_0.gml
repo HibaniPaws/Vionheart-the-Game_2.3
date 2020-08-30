@@ -112,6 +112,14 @@ switch (OnTile)
 		if (MoveY > 0) {LastDirection = "Down";}
 	}
 	
+	//Combat Alert
+	
+	var AlertRadius = 300;
+	
+	if (collision_rectangle(x-AlertRadius,y-AlertRadius,x+AlertRadius,y+AlertRadius,ENEMY,false,false))
+	{CombatAlert = true;}
+	else {CombatAlert = false;}
+	
 	//Check if in Inventory Mode
 	if (ShowInventory)
 	{CurrentState = "Inventory Mode";}
@@ -164,7 +172,7 @@ if (DEVELOPER_MODE)
 	if (keyboard_check_pressed(vk_f1)) {CombatAlert=!CombatAlert};
 
 	if (keyboard_check_pressed(vk_f3)) {DEBUG_SHOW = !DEBUG_SHOW};
-
+	if (keyboard_check_pressed(vk_f3)) {DEBUG_MENU = !DEBUG_MENU}; //Not used
 
 	if (keyboard_check_pressed(vk_backspace)) {game_restart()};
 }

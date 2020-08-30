@@ -120,7 +120,7 @@ if (DEVELOPER_MODE) //Show if Build is in DEVELOPER mode
 	draw_set_color(c_white);
 	
 	draw_text(global.max_W,global.max_H,"DEVELOPER BUILD");
-	//draw_text(global.max_W,global.max_H - 32,"Music!"); //Text above Developer Build
+	draw_text(global.max_W,global.max_H - 36,"Combat Camera Test"); //Text above Developer Build
 }
 
 if (Player.DEBUG_SHOW)
@@ -172,6 +172,13 @@ if (Player.DEBUG_SHOW)
 	//draw_text(Right_Stack-(Margin*2),Top_Stack*2,Player.Inventory.LoadItem); >>X: This is redundant now with the new inventory/item list system you're making, Alex!
 	
 
+	
+	
+}
+	
+if (Player.DEBUG_MENU) //Not used
+{
+	
 	
 	
 }

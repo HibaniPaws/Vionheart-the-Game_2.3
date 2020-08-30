@@ -17,3 +17,5 @@ switch (global.SetCaption)
 // However, music-related variables are stored globally.
 
 #endregion
+
+with (all) {depth = -y;} //Sort Depth

@@ -53,6 +53,14 @@ camera_set_view_size(Camera,FromCameraSizeW,FromCameraSizeH);
 x += (global.CameraPosition.x - x) / clamp(CameraSpeed,1,100);
 y += (global.CameraPosition.y - y) / clamp(CameraSpeed,1,100);
 
+
+//Max Camera Distance from the player.
+var CameraMaxDistanceX = global.max_W*0.1;
+var CameraMaxDistanceY = global.max_H*0.1;
+
+x = clamp(x,Player.x-CameraMaxDistanceX,Player.x+CameraMaxDistanceX);
+y = clamp(y,Player.y-CameraMaxDistanceY,Player.y+CameraMaxDistanceY);
+
 //Center camera
 var Xview_half = camera_get_view_width(Camera) * 0.5;
 var Yview_half = camera_get_view_height(Camera) * 0.5;

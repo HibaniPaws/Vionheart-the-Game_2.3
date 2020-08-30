@@ -23,9 +23,9 @@ function ChangeMusic(BG_MusicTo,Rate)
 	
 	if (global.PlayNextMusic)
 	{
-		audio_sound_gain(global.Music,0,(Rate*0.33));
+		audio_sound_gain(global.Music,0,(Rate*2));
 		
-			if (MusicGain <= 0.5)
+			if (MusicGain <= 0.33)
 			{
 				audio_stop_sound(global.Music);
 				global.Music = BG_MusicTo; 

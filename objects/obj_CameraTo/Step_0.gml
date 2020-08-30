@@ -26,7 +26,16 @@ switch(PositionState)
 		if (Player.CurrentState == "Inventory Mode") {PositionX = Player.x + 64; PositionY = Player.y;}
 		break;
 		}
-	case "Combat": {PositionX = Player.x; PositionY = Player.y; break;}
+	case "Combat": 
+	{
+		
+		var NearestEnemy = instance_nearest(Player.x,Player.y,ENEMY);
+		
+		PositionX = (Player.x + NearestEnemy.x) / 2;
+		PositionY = (Player.y + NearestEnemy.y) / 2;
+		
+	break;
+	}
 }
 
 x = PositionX;

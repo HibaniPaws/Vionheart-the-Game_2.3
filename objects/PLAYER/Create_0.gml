@@ -76,5 +76,6 @@ ShowInventory = false;
 #region Developer Stuff
 
 DEBUG_SHOW = false;
+DEBUG_MENU = false;
 
 #endregion
