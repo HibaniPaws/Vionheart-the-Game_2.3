@@ -10,8 +10,8 @@
   "type": 1,
   "bitDepth": 0,
   "audioGroupId": {
-    "name": "background_music",
-    "path": "audiogroups/background_music",
+    "name": "audiogroup_default",
+    "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "Tem_vtg_overworld_theme.wav",
   "duration": 55.99992,

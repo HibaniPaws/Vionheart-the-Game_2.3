@@ -10,8 +10,8 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "background_music",
-    "path": "audiogroups/background_music",
+    "name": "audiogroup_default",
+    "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "Tem_VTG___Cave_Theme.wav",
   "duration": 96.00708,

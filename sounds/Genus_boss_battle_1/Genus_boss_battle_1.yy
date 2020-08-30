@@ -10,8 +10,8 @@
   "type": 1,
   "bitDepth": 0,
   "audioGroupId": {
-    "name": "background_music",
-    "path": "audiogroups/background_music",
+    "name": "audiogroup_default",
+    "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "Genus_boss_battle_1.wav",
   "duration": 102.3306,
