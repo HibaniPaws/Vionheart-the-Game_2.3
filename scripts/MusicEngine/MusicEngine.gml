@@ -23,7 +23,7 @@ function ChangeMusic(BG_MusicTo,Rate)
 	
 	if (global.PlayNextMusic)
 	{
-		audio_sound_gain(global.Music,0,(Rate*2));
+		audio_sound_gain(global.Music,0,(Rate));
 		
 			if (MusicGain <= 0.33)
 			{
