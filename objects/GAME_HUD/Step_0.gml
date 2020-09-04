@@ -21,24 +21,30 @@ if PLAYER.ShowInventory {
 	key_Item[5] = keyboard_check_pressed(ord("D"))
 	#endregion 
 	
+	#region inventory pointer
 	pointer_i += key_MoveDown - key_MoveUp
 	pointer_j += key_MoveRight - key_MoveLeft
 	// limit pointers' movement
 	pointer_i = min(item_grid_h-1, max(pointer_i, 0)) 
 	pointer_j = min(item_grid_w-1, max(pointer_j, 0))
+	#endregion
 	
+	#region control inventory slots
 	for (var i = 0; i < obj_Inventory.inventory_slots_number; i++) {
-	
+		
+		// if a slot button pressed
 		if key_Item[i] {
 			
+			// if pointer is on an item select this item
 			item_in_inventory = obj_Inventory.player_inventory[# pointer_i*item_grid_w + pointer_j, 0]
 			
 			if item_in_inventory {
-			
+				// if chosen item is already in the slot remove it
 				if obj_Inventory.inventory_slots[| i] == item_in_inventory {
 					
 					obj_Inventory.inventory_slots[| i] = Item.none
 				}
+				// add an item to slot otherwise
 				else {
 					
 					scr_set_slot_item(i, item_in_inventory, obj_Inventory.inventory_slots)
@@ -46,4 +52,5 @@ if PLAYER.ShowInventory {
 			}
 		}
 	}
+	#endregion
 }
