@@ -83,6 +83,14 @@ X_InventorySlot[4] = INV_BoxOriginX; Y_InventorySlot[4] = INV_BoxOriginY-INV_Sta
 X_InventorySlot[5] = (INV_BoxOriginX+INV_BoxMargin*1); Y_InventorySlot[5] = INV_BoxOriginY-INV_Stack2;
 X_InventorySlot[6] = (INV_BoxOriginX+INV_BoxMargin*2); Y_InventorySlot[6] = INV_BoxOriginY-INV_Stack2;
 
+#region draw inventory slot items
+
+for (var i = 0; i < obj_Inventory.inventory_slots_number; i++) {
+	
+	draw_sprite(spr_items, obj_Inventory.inventory_slots[| i], X_InventorySlot[i+1], Y_InventorySlot[i+1])
+}
+#endregion
+
 #endregion
 
 #region Inventory Menu
@@ -102,6 +110,7 @@ draw_set_halign(fa_right);
 draw_text(global.max_W-Margin,0+Margin,"Casts");
 draw_text(inv_label_x, inv_label_y, "Inventory");
 
+#region draw inventory grid
 for (var i = 0; i < item_grid_w; ++i) {
     
 	for (var j = 0; j < item_grid_h; ++j) {
@@ -117,6 +126,7 @@ for (var i = 0; i < item_grid_w; ++i) {
 		draw_sprite(spr_items, item_id, xx, yy)
 	}
 }
+#endregion
 
 }
 #endregion
