@@ -29,3 +29,6 @@ scr_add_item_info(Item.heal1, Item_type.consumable, "almost as healthy as fresh 
 
 _add_item(Item.dagger1, 1)
 _add_item(Item.sword1, 1)
+
+// >>X: Seems pretty good so far! I think I can understand it a bit, we would have to discuss about this though.
+// >>X: Check Inventory_script Script if you can. If you're planning to debug/test it.
