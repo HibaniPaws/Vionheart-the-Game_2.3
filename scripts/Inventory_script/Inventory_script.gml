@@ -14,19 +14,19 @@ function Inventory_script() {
 //example:
 //	ActiveSlot[1] = Item.none;
 //	ActiveSlot[2] = Item.dagger1;
-	ActiveSlot[1] = 0;
-	ActiveSlot[2] = 0;
-	ActiveSlot[3] = 0;
-	ActiveSlot[4] = 0;
-	ActiveSlot[5] = 0;
-	ActiveSlot[6] = 0;
+	//ActiveSlot[1] = 0;
+	//ActiveSlot[2] = 0;
+	//ActiveSlot[3] = 0;
+	//ActiveSlot[4] = 0;
+	//ActiveSlot[5] = 0;
+	//ActiveSlot[6] = 0;
 
-	//Cast is in Slot
+	////Cast is in Slot
 
-	CastSlot[1] = 0;
-	CastSlot[2] = 0;
-	CastSlot[3] = 0;
-	CastSlot[4] = 0;
+	//CastSlot[1] = 0;
+	//CastSlot[2] = 0;
+	//CastSlot[3] = 0;
+	//CastSlot[4] = 0;
 
 		// >>X: Here is the code for using said slots. for both Items and Casts. based on player Input.
 

@@ -85,9 +85,9 @@ X_InventorySlot[6] = (INV_BoxOriginX+INV_BoxMargin*2); Y_InventorySlot[6] = INV_
 
 #region draw inventory slot items
 
-for (var i = 0; i < obj_Inventory.inventory_slots_number; i++) {
+for (var i = 0; i < PLAYER.ActiveSlotsNum; i++) {
 	
-	draw_sprite(spr_items, obj_Inventory.inventory_slots[| i], X_InventorySlot[i+1], Y_InventorySlot[i+1])
+	draw_sprite(spr_items, PLAYER.ActiveSlot[i], X_InventorySlot[i+1], Y_InventorySlot[i+1])
 }
 #endregion
 

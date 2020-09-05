@@ -30,7 +30,7 @@ if PLAYER.ShowInventory {
 	#endregion
 	
 	#region control inventory slots
-	for (var i = 0; i < obj_Inventory.inventory_slots_number; i++) {
+	for (var i = 0; i < PLAYER.ActiveSlotsNum; i++) {
 		
 		// if a slot button pressed
 		if key_Item[i] {
@@ -40,14 +40,14 @@ if PLAYER.ShowInventory {
 			
 			if item_in_inventory {
 				// if chosen item is already in the slot remove it
-				if obj_Inventory.inventory_slots[| i] == item_in_inventory {
+				if PLAYER.ActiveSlot[i] == item_in_inventory {
 					
-					obj_Inventory.inventory_slots[| i] = Item.none
+					PLAYER.ActiveSlot[i] = Item.none
 				}
 				// add an item to slot otherwise
 				else {
 					
-					scr_set_slot_item(i, item_in_inventory, obj_Inventory.inventory_slots)
+					scr_set_slot_item(i, item_in_inventory, PLAYER.ActiveSlot)
 				}
 			}
 		}

@@ -31,7 +31,12 @@ global.Player_Name = "Camaer";
 	}
 
 #endregion
-
+#region Create slots
+ActiveSlot = [0, 0, 0, 0, 0, 0]
+CastSlot = [0, 0, 0, 0]
+ActiveSlotsNum = 6
+CastSlotsNum = 4
+#endregion
 #region	Base variables/stats
 
 BaseStats(1,1,1);
