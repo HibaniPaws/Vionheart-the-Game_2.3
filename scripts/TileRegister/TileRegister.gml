@@ -6,8 +6,8 @@ function TileRegister() {
 	switch (Tile)
 	{
 		case 1: OnTile = "Grass"; break;
-		case 8: OnTile = "Dirt"; break;
-		case 13: OnTile = "Water"; break;
+		case 2: OnTile = "Dirt"; break;
+		case 3: OnTile = "Water"; break;
 
 	}
 
