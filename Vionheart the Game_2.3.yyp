@@ -118,8 +118,8 @@
     ],
   },
   "RoomOrder": [
-    {"name":"room_MainMenu","path":"rooms/room_MainMenu/room_MainMenu.yy",},
     {"name":"room_Ecstacy","path":"rooms/room_Ecstacy/room_Ecstacy.yy",},
+    {"name":"room_MainMenu","path":"rooms/room_MainMenu/room_MainMenu.yy",},
     {"name":"room_KnotIsland","path":"rooms/room_KnotIsland/room_KnotIsland.yy",},
   ],
   "Folders": [

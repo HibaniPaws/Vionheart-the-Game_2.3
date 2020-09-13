@@ -5,11 +5,14 @@ function TileRegister() {
 
 	switch (Tile)
 	{
+		default: OnTile = "NONE"; break;
 		case 1: OnTile = "Grass"; break;
 		case 2: OnTile = "Dirt"; break;
 		case 3: OnTile = "Water"; break;
 
 	}
+	
+	if (!Tile) {OnTile = "VOID";}
 
 	return OnTile;
 

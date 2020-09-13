@@ -90,6 +90,8 @@ switch (OnTile)
 	case "Grass": MovementSpeed = 1; break;
 	case "Dirt": MovementSpeed = 0.5; break;
 	case "Water": MovementSpeed = 0.25; CurrentState = "In Water"; break;
+	case "NONE": break;
+	case "VOID": game_restart(); break;
 }
 
 #endregion
