@@ -77,6 +77,7 @@
     {"id":{"name":"shd_posterization","path":"shaders/shd_posterization/shd_posterization.yy",},"order":8,},
     {"id":{"name":"shd_ripple","path":"shaders/shd_ripple/shd_ripple.yy",},"order":9,},
     {"id":{"name":"shd_scanlines","path":"shaders/shd_scanlines/shd_scanlines.yy",},"order":10,},
+    {"id":{"name":"OutOfBounds","path":"scripts/OutOfBounds/OutOfBounds.yy",},"order":7,},
     {"id":{"name":"shd_sepia","path":"shaders/shd_sepia/shd_sepia.yy",},"order":11,},
     {"id":{"name":"shd_shockwave","path":"shaders/shd_shockwave/shd_shockwave.yy",},"order":12,},
     {"id":{"name":"shd_sketch","path":"shaders/shd_sketch/shd_sketch.yy",},"order":13,},

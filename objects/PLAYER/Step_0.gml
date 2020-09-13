@@ -91,8 +91,9 @@ switch (OnTile)
 	case "Dirt": MovementSpeed = 0.5; break;
 	case "Water": MovementSpeed = 0.25; CurrentState = "In Water"; break;
 	case "NONE": break;
-	case "VOID": game_restart(); break;
+	case "VOID": OutOfBounds(); break;
 }
+
 
 #endregion
 
@@ -129,6 +130,8 @@ switch (OnTile)
 	//Check if in combat or passive
 	if (CombatAlert) {CombatState = "In Combat";}
 	else if (!CombatAlert) {CombatState = "Passive";}
+	
+	//Out of Bounds
 
 #endregion
 
