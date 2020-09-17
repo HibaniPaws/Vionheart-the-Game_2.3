@@ -38,6 +38,13 @@ if (HasControl)
 	key_Item[6] = keyboard_check_pressed(ord("D"));
 	key_ItemHeld[6] = keyboard_check(ord("D"));
 }
+else if (!HasControl)
+		{
+			key_MoveLeft = 0;
+			key_MoveRight = 0;
+			key_MoveUp = 0;
+			key_MoveDown = 0;
+		}
 #endregion
 
 #region Movement
@@ -99,6 +106,8 @@ switch (OnTile)
 
 #region States
 	
+
+	
 	//Check movement
 	if (MoveX == 0) || (MoveY == 0)
 	{CurrentState = "Idle";}
@@ -132,6 +141,12 @@ switch (OnTile)
 	else if (!CombatAlert) {CombatState = "Passive";}
 	
 	//Out of Bounds
+	//Check if in VOID and stay in VOID
+	if (OnTile == "VOID")
+	{
+		CurrentState = "Out of Bounds";
+		HasControl = false;
+	}
 
 #endregion
 

@@ -22,7 +22,8 @@ switch(PositionState)
 		{
 			PositionX = Player.x; PositionY = Player.y; //Default / Failsafe
 		if (Player.CurrentState == "Moving") {PositionX = Player.x + (Player.MoveX*48); PositionY = Player.y + (Player.MoveY*48);}
-		if (Player.CurrentState == "Idle") {PositionX += (Player.x - x) / 20; PositionY += (Player.y - y) / 20;}
+		if (Player.CurrentState == "Idle") //{PositionX += (Player.x - x) / 20; PositionY += (Player.y - y) / 20;} //Old Idle Camera State
+																{PositionX = x; PositionY = y;}
 		if (Player.CurrentState == "Inventory Mode") {PositionX = Player.x + 40; PositionY = Player.y;}
 		break;
 		}

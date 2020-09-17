@@ -110,6 +110,30 @@ draw_text(global.max_W-Margin,global.max_H*0.50 + Margin,"Inventory");
 }
 #endregion
 
+#region Out of Bounds
+
+	if (Player.CurrentState == "Out of Bounds")
+	{
+		draw_set_color(c_black);
+		draw_rectangle(0,0,global.max_W,global.max_H,false);
+		
+
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_bottom);
+		draw_set_color(c_purple);
+	
+		draw_text(global.max_W*0.5,global.max_H*0.5,"Oh dear, you're not supposed to be here."); //First Text
+		
+			var SecondTextTimer = room_speed * 3;
+			if (Player.alarm[0] <= SecondTextTimer) //Second Text
+			{draw_text(global.max_W*0.5,(global.max_H*0.5 + 64),"Let me fix that for you.");}
+			
+			if (Player.alarm[0] < 4) {SetWindowCaption("Maple is watching.");}
+		
+	}
+
+#endregion
+
 #region Debug Screen
 
 if (DEVELOPER_MODE) //Show if Build is in DEVELOPER mode

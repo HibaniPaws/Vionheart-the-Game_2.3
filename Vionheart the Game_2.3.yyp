@@ -5,6 +5,7 @@
     {"id":{"name":"VTG_Player_Red_C_Neutral","path":"sprites/VTG_Player_Red_C_Neutral/VTG_Player_Red_C_Neutral.yy",},"order":1,},
     {"id":{"name":"VTG_Player_Red_C_Up","path":"sprites/VTG_Player_Red_C_Up/VTG_Player_Red_C_Up.yy",},"order":2,},
     {"id":{"name":"VTG_Player_Red_Use_Down","path":"sprites/VTG_Player_Red_Use_Down/VTG_Player_Red_Use_Down.yy",},"order":0,},
+    {"id":{"name":"room_VuleLabs","path":"rooms/room_VuleLabs/room_VuleLabs.yy",},"order":3,},
     {"id":{"name":"VTG_Player_Red_Use_Neutral","path":"sprites/VTG_Player_Red_Use_Neutral/VTG_Player_Red_Use_Neutral.yy",},"order":1,},
     {"id":{"name":"VTG_Player_Red_Use_Up","path":"sprites/VTG_Player_Red_Use_Up/VTG_Player_Red_Use_Up.yy",},"order":2,},
     {"id":{"name":"SetWindowCaption","path":"scripts/SetWindowCaption/SetWindowCaption.yy",},"order":6,},
@@ -122,6 +123,7 @@
     {"name":"room_Ecstacy","path":"rooms/room_Ecstacy/room_Ecstacy.yy",},
     {"name":"room_MainMenu","path":"rooms/room_MainMenu/room_MainMenu.yy",},
     {"name":"room_KnotIsland","path":"rooms/room_KnotIsland/room_KnotIsland.yy",},
+    {"name":"room_VuleLabs","path":"rooms/room_VuleLabs/room_VuleLabs.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
