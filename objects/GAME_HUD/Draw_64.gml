@@ -5,6 +5,7 @@ var Margin=40;
 var Top_Stack=72;
 var Bottom_Stack=(global.max_H);
 var Right_Stack=(global.max_W);
+
 draw_set_font(font_Text);
 draw_set_alpha(1);
 
@@ -109,7 +110,43 @@ draw_text(global.max_W-Margin,global.max_H*0.50 + Margin,"Inventory");
 }
 #endregion
 
+#region Out of Bounds
+
+	if (Player.CurrentState == "Out of Bounds")
+	{
+		draw_set_color(c_black);
+		draw_rectangle(0,0,global.max_W,global.max_H,false);
+		
+
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_bottom);
+		draw_set_color(c_purple);
+	
+		draw_text(global.max_W*0.5,global.max_H*0.5,"Oh dear, you're not supposed to be here."); //First Text
+		
+			var SecondTextTimer = room_speed * 3;
+			if (Player.alarm[0] <= SecondTextTimer) //Second Text
+			{draw_text(global.max_W*0.5,(global.max_H*0.5 + 64),"Let me fix that for you.");}
+			
+			if (Player.alarm[0] < 4) {SetWindowCaption("Maple is watching.");}
+		
+	}
+
+#endregion
+
 #region Debug Screen
+
+if (DEVELOPER_MODE) //Show if Build is in DEVELOPER mode
+{
+	draw_set_halign(fa_right);
+	draw_set_valign(fa_bottom);
+	draw_set_font(font_Text);
+	draw_set_color(c_white);
+	
+	draw_text(global.max_W,global.max_H,"DEVELOPER BUILD");
+	draw_text(global.max_W,global.max_H - 36,"Misc. Development"); //Text above Developer Build
+}
+
 if (Player.DEBUG_SHOW)
 {
 	
@@ -128,7 +165,14 @@ if (Player.DEBUG_SHOW)
 	
 	//Camera Position State
 	draw_text(Margin,Bottom_Stack-(72*4),"Camera Position Status:");
-	draw_text(Margin*8,Bottom_Stack-(72*4),global.CameraPosition.PositionState);
+	draw_text(Margin*8.25,Bottom_Stack-(72*4),global.CameraPosition.PositionState);
+	
+	//Show currently playing music.
+	
+	var PlayingMusic = audio_get_name(global.Music); //Get current music name
+	
+	draw_text(Margin,Bottom_Stack-(72*5),"Playing Music:");
+	draw_text(Margin*5.25,Bottom_Stack-(72*5),PlayingMusic);
 	
 	//FPS
 	draw_set_halign(fa_right);
@@ -149,7 +193,17 @@ if (Player.DEBUG_SHOW)
 	if (Player.key_ItemHeld[6]) draw_circle(X_InventorySlot[6],Y_InventorySlot[6],16,false);
 	
 	//Show loaded items
-	draw_text(Right_Stack-(Margin*2),Top_Stack*2,Player.Inventory.LoadItem);
+	//draw_text(Right_Stack-(Margin*2),Top_Stack*2,Player.Inventory.LoadItem); >>X: This is redundant now with the new inventory/item list system you're making, Alex!
+	
+
+	
+	
+}
+	
+if (Player.DEBUG_MENU) //Not used
+{
+	
+	
 	
 }
 #endregion

@@ -21,34 +21,23 @@ switch(PositionState)
 	case "Passive":
 		{
 			PositionX = Player.x; PositionY = Player.y; //Default / Failsafe
-		if (Player.CurrentState == "Moving") PositionX = Player.x + (Player.MoveX*48); PositionY = Player.y + (Player.MoveY*48);
-		if (Player.CurrentState == "Idle") PositionX += (Player.x - x) / 20; PositionY += (Player.y - y) / 20;
-		if (Player.CurrentState == "Inventory Mode") PositionX = Player.x + 64; PositionY = Player.y;
+		if (Player.CurrentState == "Moving") {PositionX = Player.x + (Player.MoveX*48); PositionY = Player.y + (Player.MoveY*48);}
+		if (Player.CurrentState == "Idle") //{PositionX += (Player.x - x) / 20; PositionY += (Player.y - y) / 20;} //Old Idle Camera State
+																{PositionX = x; PositionY = y;}
+		if (Player.CurrentState == "Inventory Mode") {PositionX = Player.x + 40; PositionY = Player.y;}
 		break;
 		}
-	case "Combat": {PositionX = Player.x; PositionY = Player.y; break;}
-}
-
-//switch (Player.CurrentState)
-//{
-//	case "Moving":
-//		switch(PositionState)
-//		{
-//			case "Passive": {PositionX = Player.x + (Player.MoveX*48); PositionY = Player.y + (Player.MoveY*48); break;}
-//			case "Combat": {PositionX = x; PositionY = y; break;}
-//		}
+	case "Combat": 
+	{
 		
-//	break;
-	
-//	case "Idle":
-//		switch(PositionState)
-//		{
-//			case "Passive": {PositionX += (Player.x - x) / 20; PositionY += (Player.y - y) / 20; break;}
-//			case "Combat": {PositionX = Player.x; PositionY = Player.y; break;}
-//		}
-//	break;
-	
-//}
+		var NearestEnemy = instance_nearest(Player.x,Player.y,ENEMY);
+		
+		PositionX = (Player.x + NearestEnemy.x) / 2;
+		PositionY = (Player.y + NearestEnemy.y) / 2;
+		
+	break;
+	}
+}
 
 x = PositionX;
 y = PositionY;

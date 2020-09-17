@@ -38,6 +38,13 @@ if (HasControl)
 	key_Item[6] = keyboard_check_pressed(ord("D"));
 	key_ItemHeld[6] = keyboard_check(ord("D"));
 }
+else if (!HasControl)
+		{
+			key_MoveLeft = 0;
+			key_MoveRight = 0;
+			key_MoveUp = 0;
+			key_MoveDown = 0;
+		}
 #endregion
 
 #region Movement
@@ -83,18 +90,25 @@ Inventory_script();
 
 #region Tile recognition
 
-TileRegister(); //Returns "OnTile" Variable
+//TileRegister(); //Returns "OnTile" Variable
+TileRecognition();
 
 switch (OnTile)
 {
 	case "Grass": MovementSpeed = 1; break;
 	case "Dirt": MovementSpeed = 0.5; break;
 	case "Water": MovementSpeed = 0.25; CurrentState = "In Water"; break;
+	case "NONE": break;
+	case "VOID": OutOfBounds(); break;
+	case "Lab": MovementSpeed = 1; break;
 }
+
 
 #endregion
 
 #region States
+	
+
 	
 	//Check movement
 	if (MoveX == 0) || (MoveY == 0)
@@ -112,6 +126,14 @@ switch (OnTile)
 		if (MoveY > 0) {LastDirection = "Down";}
 	}
 	
+	//Combat Alert
+	
+	var AlertRadius = 300;
+	
+	if (collision_rectangle(x-AlertRadius,y-AlertRadius,x+AlertRadius,y+AlertRadius,ENEMY,false,false))
+	{CombatAlert = true;}
+	else {CombatAlert = false;}
+	
 	//Check if in Inventory Mode
 	if (ShowInventory)
 	{CurrentState = "Inventory Mode";}
@@ -119,7 +141,37 @@ switch (OnTile)
 	//Check if in combat or passive
 	if (CombatAlert) {CombatState = "In Combat";}
 	else if (!CombatAlert) {CombatState = "Passive";}
+	
+	//Out of Bounds
+	//Check if in VOID and stay in VOID
+	if (OnTile == "VOID")
+	{
+		CurrentState = "Out of Bounds";
+		HasControl = false;
+	}
 
+#endregion
+
+#region Music
+	//Only ONE state must be active for music to be played if called.
+	//Meaning CombatState == "Passive" and CurrentState == "Inventory Mode" cannot play music because Passive CombatState and Idle CurrentState stack with eachother.
+	//Music being played is prioritized from Bottom to Top.
+	
+		if (CombatState == "Passive")
+		{
+			if (CurrentState == "Inventory Mode") {ChangeMusic(InventoryTheme,200);}
+			else {ChangeMusic(PassiveTheme,750);}
+		}
+		
+		if (CombatState == "In Combat")
+		{
+			ChangeMusic(CombatTheme,400);
+		}
+		
+	//>> X: Can be translated into a Switch statement.
+	//>> X: ~~Music can be set as variables, each character (obj_Red), as an example, can have their own special themes!~~ Variables are set.
+
+	
 #endregion
 
 #region Animation
@@ -142,7 +194,7 @@ if (DEVELOPER_MODE)
 	if (keyboard_check_pressed(vk_f1)) {CombatAlert=!CombatAlert};
 
 	if (keyboard_check_pressed(vk_f3)) {DEBUG_SHOW = !DEBUG_SHOW};
-
+	if (keyboard_check_pressed(vk_f3)) {DEBUG_MENU = !DEBUG_MENU}; //Not used
 
 	if (keyboard_check_pressed(vk_backspace)) {game_restart()};
 }

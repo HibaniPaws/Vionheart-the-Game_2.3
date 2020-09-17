@@ -6,15 +6,32 @@ Current_Height = camera_get_view_height(Camera);
 
 #region Camera Status
 
-var SizeMultiplier = 17.5;
+var SizeMultiplier = 40;
 var CameraSpeed = 10; //Lower the number = Faster
 
 
-switch (Player.CombatState)
+switch (Player.CombatState) //Combat State Camera Statuses
 {
-	case "In Combat": SizeMultiplier = SizeMultiplier + 10; CameraSpeed += 5; break;
+	case "In Combat":
+	{	
+		
+		var NearestEnemy = instance_nearest(Player.x,Player.y,ENEMY);
+		var EnemyDistance = point_distance(Player.x,Player.y,NearestEnemy.x,NearestEnemy.y) * 0.2;
+		
+		SizeMultiplier = EnemyDistance;
+		SizeMultiplier = clamp(SizeMultiplier,20,60);
+		CameraSpeed = 20;
+		
+	break;
+	}
 
 }
+
+switch (Player.CurrentState) //Player State Camera Statuses
+{
+	case "Inventory Mode" : SizeMultiplier -= 30; break;
+}
+
 #endregion
 
 #region Window Sizes
@@ -52,6 +69,14 @@ camera_set_view_size(Camera,FromCameraSizeW,FromCameraSizeH);
 
 x += (global.CameraPosition.x - x) / clamp(CameraSpeed,1,100);
 y += (global.CameraPosition.y - y) / clamp(CameraSpeed,1,100);
+
+
+//Max Camera Distance from the player.
+var CameraMaxDistanceX = global.max_W*0.1;
+var CameraMaxDistanceY = global.max_H*0.1;
+
+x = clamp(x,Player.x-CameraMaxDistanceX,Player.x+CameraMaxDistanceX);
+y = clamp(y,Player.y-CameraMaxDistanceY,Player.y+CameraMaxDistanceY);
 
 //Center camera
 var Xview_half = camera_get_view_width(Camera) * 0.5;
