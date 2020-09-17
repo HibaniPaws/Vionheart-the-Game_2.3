@@ -90,7 +90,8 @@ Inventory_script();
 
 #region Tile recognition
 
-TileRegister(); //Returns "OnTile" Variable
+//TileRegister(); //Returns "OnTile" Variable
+TileRecognition();
 
 switch (OnTile)
 {
@@ -99,6 +100,7 @@ switch (OnTile)
 	case "Water": MovementSpeed = 0.25; CurrentState = "In Water"; break;
 	case "NONE": break;
 	case "VOID": OutOfBounds(); break;
+	case "Lab": MovementSpeed = 1; break;
 }
 
 

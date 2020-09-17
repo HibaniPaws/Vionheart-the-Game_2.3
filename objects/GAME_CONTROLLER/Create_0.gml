@@ -2,6 +2,7 @@
 
 global.Timescale = 1;
 
+window_set_size((display_get_width()*0.75),(display_get_height()*0.75));
 
 #region Window Captions
 	global.SetWindowCaption = false;

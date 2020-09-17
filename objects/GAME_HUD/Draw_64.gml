@@ -144,7 +144,7 @@ if (DEVELOPER_MODE) //Show if Build is in DEVELOPER mode
 	draw_set_color(c_white);
 	
 	draw_text(global.max_W,global.max_H,"DEVELOPER BUILD");
-	draw_text(global.max_W,global.max_H - 36,"Camera Test"); //Text above Developer Build
+	draw_text(global.max_W,global.max_H - 36,"Misc. Development"); //Text above Developer Build
 }
 
 if (Player.DEBUG_SHOW)

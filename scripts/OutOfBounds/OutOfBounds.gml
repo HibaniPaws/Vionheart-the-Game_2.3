@@ -1,5 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
+//Script when player is out of bounds.
 function OutOfBounds(){
 
 		var RestartTimer = room_speed*6;
