@@ -16,8 +16,11 @@
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"GAME_MainMenu","path":"objects/GAME_MainMenu/GAME_MainMenu.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1856.0,"y":1040.0,"resourceVersion":"1.0","name":"inst_4274C45F","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"GAME_CONTROLLER","path":"objects/GAME_CONTROLLER/GAME_CONTROLLER.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1888.0,"y":1040.0,"resourceVersion":"1.0","name":"inst_5664EE1F","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[
+            {"propertyId":{"name":"LevelMusic","path":"objects/GAME_ChangeMusic/GAME_ChangeMusic.yy",},"objectId":{"name":"GAME_ChangeMusic","path":"objects/GAME_ChangeMusic/GAME_ChangeMusic.yy",},"value":"Tem_vtg_overworld_theme","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+          ],"isDnd":false,"objectId":{"name":"GAME_ChangeMusic","path":"objects/GAME_ChangeMusic/GAME_ChangeMusic.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1824.0,"y":1040.0,"resourceVersion":"1.0","name":"inst_49994EE4","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
-    {"spriteId":{"name":"VionheartTheGameMainMenu","path":"sprites/VionheartTheGameMainMenu/VionheartTheGameMainMenu.yy",},"colour":4294967295,"x":0,"y":0,"htiled":false,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":15.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Background","tags":[],"resourceType":"GMRBackgroundLayer",},
+    {"spriteId":{"name":"VionheartTheGameTitleBG","path":"sprites/VionheartTheGameTitleBG/VionheartTheGameTitleBG.yy",},"colour":4294967295,"x":0,"y":0,"htiled":false,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":15.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Background","tags":[],"resourceType":"GMRBackgroundLayer",},
   ],
   "inheritLayers": false,
   "creationCodeFile": "",
@@ -25,6 +28,7 @@
   "instanceCreationOrder": [
     {"name":"inst_5664EE1F","path":"rooms/room_MainMenu/room_MainMenu.yy",},
     {"name":"inst_4274C45F","path":"rooms/room_MainMenu/room_MainMenu.yy",},
+    {"name":"inst_49994EE4","path":"rooms/room_MainMenu/room_MainMenu.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

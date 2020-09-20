@@ -65,11 +65,6 @@ ShowInventory = false;
 	WALKUP = spr_AnimationIsMissing;
 	#endregion
 
-	#region Default Music Variables
-	PassiveTheme = Tem_vtg_overworld_theme;
-	InventoryTheme = Tem_VTG___Cave_Theme;
-	CombatTheme = Genus_boss_battle_1;
-	#endregion
 
 #endregion
 

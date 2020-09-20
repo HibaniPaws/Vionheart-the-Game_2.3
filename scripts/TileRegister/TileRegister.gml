@@ -1,3 +1,5 @@
+
+// LEGACY
 function TileRegister() {
 	var FEET = bbox_bottom;
 	var Tile = tilemap_get_at_pixel(TILES,x,FEET);

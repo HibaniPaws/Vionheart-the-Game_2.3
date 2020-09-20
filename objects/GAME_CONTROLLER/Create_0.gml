@@ -4,6 +4,10 @@ global.Timescale = 1;
 
 window_set_size((display_get_width()*0.75),(display_get_height()*0.75));
 
+//Max Resolution
+global.max_W = display_get_width();
+global.max_H = display_get_height();
+
 #region Window Captions
 	global.SetWindowCaption = false;
 	randomise(); //Randomise game initial seed
@@ -15,7 +19,7 @@ window_set_size((display_get_width()*0.75),(display_get_height()*0.75));
 
 	MaxCaptions = array_length(WindowCaption) - 1; //Check max amount of Window Captions and store it into a variable.
 	global.SetCaption = irandom(MaxCaptions); //This variable will be the one used to set the Window Caption.
-	window_set_caption(WindowCaption[global.SetCaption]); //Set Initial Window Caption.
+	window_set_caption("Vionheart: the Game | " + WindowCaption[global.SetCaption]); //Set Initial Window Caption.
 #endregion
 
 #region Music

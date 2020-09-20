@@ -19,3 +19,13 @@ switch (global.SetCaption)
 #endregion
 
 with (all) {depth = -y;} //Sort Depth
+
+
+#region Developer Mode
+if (DEVELOPER_MODE)
+{
+	
+	if (keyboard_check_pressed(vk_backspace)) {game_restart()};
+	
+}
+#endregion

@@ -10,9 +10,6 @@ DEBUG_SHOW = false; //Show Debug stuff when in Developer mode.
 view_visible[Camera]=true;
 view_enabled=true;
 
-//Max Resolution
-global.max_W = display_get_width();
-global.max_H = display_get_height();
 view_wport[Camera] = global.max_W;
 view_hport[Camera] = global.max_H;
 

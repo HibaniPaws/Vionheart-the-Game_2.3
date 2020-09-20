@@ -14,9 +14,11 @@
   ],
   "layers": [
     {"instances":[
-        {"properties":[],"isDnd":false,"objectId":{"name":"GAME_CONTROLLER","path":"objects/GAME_CONTROLLER/GAME_CONTROLLER.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":784.0,"y":784.0,"resourceVersion":"1.0","name":"inst_555A857B","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_Red","path":"objects/obj_Red/obj_Red.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":32.0,"y":400.0,"resourceVersion":"1.0","name":"inst_64B7DAD7","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_Enemy_Dummy","path":"objects/obj_Enemy_Dummy/obj_Enemy_Dummy.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":480.0,"y":320.0,"resourceVersion":"1.0","name":"inst_3788A8CA","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[
+            {"propertyId":{"name":"LevelMusic","path":"objects/GAME_ChangeMusic/GAME_ChangeMusic.yy",},"objectId":{"name":"GAME_ChangeMusic","path":"objects/GAME_ChangeMusic/GAME_ChangeMusic.yy",},"value":"Tem_VTG___Cave_Theme","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+          ],"isDnd":false,"objectId":{"name":"GAME_ChangeMusic","path":"objects/GAME_ChangeMusic/GAME_ChangeMusic.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":784.0,"y":784.0,"resourceVersion":"1.0","name":"inst_7F835D57","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"tilesetId":{"name":"tileset_Water","path":"tilesets/tileset_Water/tileset_Water.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":50,"SerialiseHeight":50,"TileSerialiseData":[
 2147483648,2147483648,2147483648,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2147483648,2147483648,
@@ -232,9 +234,9 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_555A857B","path":"rooms/room_VuleLabs/room_VuleLabs.yy",},
     {"name":"inst_64B7DAD7","path":"rooms/room_VuleLabs/room_VuleLabs.yy",},
     {"name":"inst_3788A8CA","path":"rooms/room_VuleLabs/room_VuleLabs.yy",},
+    {"name":"inst_7F835D57","path":"rooms/room_VuleLabs/room_VuleLabs.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

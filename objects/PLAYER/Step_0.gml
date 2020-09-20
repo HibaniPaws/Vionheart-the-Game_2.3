@@ -157,6 +157,12 @@ switch (OnTile)
 	//Meaning CombatState == "Passive" and CurrentState == "Inventory Mode" cannot play music because Passive CombatState and Idle CurrentState stack with eachother.
 	//Music being played is prioritized from Bottom to Top.
 	
+	#region Default Music Variables
+	PassiveTheme = global.BGMusic;
+	InventoryTheme = Tem_VTG___Cave_Theme;
+	CombatTheme = Genus_boss_battle_1;
+	#endregion
+	
 		if (CombatState == "Passive")
 		{
 			if (CurrentState == "Inventory Mode") {ChangeMusic(InventoryTheme,200);}
@@ -196,6 +202,5 @@ if (DEVELOPER_MODE)
 	if (keyboard_check_pressed(vk_f3)) {DEBUG_SHOW = !DEBUG_SHOW};
 	if (keyboard_check_pressed(vk_f3)) {DEBUG_MENU = !DEBUG_MENU}; //Not used
 
-	if (keyboard_check_pressed(vk_backspace)) {game_restart()};
 }
 #endregion
