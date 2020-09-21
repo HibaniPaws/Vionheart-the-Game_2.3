@@ -6,7 +6,7 @@
     "path": "folders/Music.yy",
   },
   "resourceVersion": "1.0",
-  "name": "MusicEngine",
+  "name": "ChangeMusic",
   "tags": [],
   "resourceType": "GMScript",
 }

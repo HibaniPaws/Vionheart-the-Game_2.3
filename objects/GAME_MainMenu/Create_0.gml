@@ -1,5 +1,7 @@
 MenuScreen = "Main Menu";
 MenuSelect = 0;
+CreditsSequence = false;
+TIME = 0;
 
 	#region Extra Menu Art
 	
@@ -14,3 +16,42 @@ MenuSelect = 0;
 	
 	#endregion
 	GetCaption = array_get(GAME_CONTROLLER.WindowCaption,global.SetCaption); //Display window Caption
+
+#region Credits
+
+CreditsFont = font_Credits;
+
+	Test =
+@"
+This is a test
+because I learned something new
+and I wanna try it out!
+
+if it works as expected:
+~just like this
+
+it will be a scientific breakthrough!
+
+
+for me.
+
+-The smart Sign Painter
+";
+
+	Credits =
+@"
+Programming
+Xyril Placina
+MoonAlex
+
+Music
+Tem's Human
+CalculatinGenius
+
+Special Thanks
+Darkia
+Zenogias
+RedPsycho
+";
+
+#endregion

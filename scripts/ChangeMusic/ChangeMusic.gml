@@ -11,14 +11,14 @@ enum SoundPriority
 	sound_FX
 }
 
-	/// @function ChangeMusic(BG_MusicTo,Rate)
-	/// @description Change global.music.
+
+	/// @description Change global.Music
 	/// @param {index} BG_MusicTo Next Music to Play
 	/// @param {real} Rate The rate (in milliseconds) to transition
-function ChangeMusic(BG_MusicTo,Rate)
+function ChangeMusic(Music,Rate)
 {
 	
-	if (global.Music != BG_MusicTo) {global.PlayNextMusic=true;}
+	if (global.Music != Music) {global.PlayNextMusic=true;}
 	var MusicGain = audio_sound_get_gain(global.Music);
 	
 	if (global.PlayNextMusic)
@@ -28,7 +28,7 @@ function ChangeMusic(BG_MusicTo,Rate)
 			if (MusicGain <= 0.33)
 			{
 				audio_stop_sound(global.Music);
-				global.Music = BG_MusicTo; 
+				global.Music = Music; 
 				audio_play_sound(global.Music,SoundPriority.bg_music,true);
 				audio_sound_gain(global.Music,0,0);
 				audio_sound_gain(global.Music,1,(Rate));
