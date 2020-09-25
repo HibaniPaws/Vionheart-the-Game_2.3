@@ -2,6 +2,7 @@
 
 HasControl = true;
 global.Player_Name = "Camaer";
+global.Player = id;
 
 #region	Create Camera Object
 

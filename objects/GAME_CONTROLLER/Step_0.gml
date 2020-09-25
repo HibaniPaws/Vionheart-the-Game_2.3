@@ -24,8 +24,12 @@ with (all) {depth = -y;} //Sort Depth
 #region Developer Mode
 if (DEVELOPER_MODE)
 {
+	if (!instance_exists(PLAYER))
+	{
+		if (keyboard_check_pressed(vk_backspace)) {game_restart()};
+	}
 	
-	if (keyboard_check_pressed(vk_backspace)) {game_restart()};
+	if (keyboard_check_pressed(vk_f3)) {global.DEBUG_SHOW = !global.DEBUG_SHOW};
 	
 }
 #endregion

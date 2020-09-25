@@ -7,7 +7,20 @@ function OutOfBounds(){
 		var RestartTimer = room_speed*6;
 		ChangeMusic(noone,0);
 		CurrentState = "Out of Bounds";
+		global.OutOfBounds = true;
 	
-	if (alarm[0] <= 0) {alarm_set(0,RestartTimer);}
+	if (alarm[0] <= 0)
+	{
+		alarm_set(0,RestartTimer);
+	}
+	
+	with (GAME_CONTROLLER)
+	{
+			if (alarm[0] <= 0)
+	{
+		alarm_set(0,RestartTimer);
+	}
+	
+	}
 
 }

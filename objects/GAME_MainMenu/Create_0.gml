@@ -52,6 +52,10 @@ Special Thanks
 Darkia
 Zenogias
 RedPsycho
+Bekureru
+
+Patrons
+Bekureru
 ";
 
 #endregion

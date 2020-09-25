@@ -2,6 +2,8 @@
 
 //Set camera
 Camera = view_camera[0];
+CameraState = "NONE";
+
 camera_set_view_size(Camera,3,3);
 WindowSize = 2; //Variable for changing resolutions.
 Fullscreen = false; //Enable Fullscreen.

@@ -1,6 +1,8 @@
 /// @description	Initialize
 
 global.Timescale = 1;
+global.DEBUG_SHOW = false;
+global.OutOfBounds = false;
 
 window_set_size((display_get_width()*0.75),(display_get_height()*0.75));
 

@@ -2,13 +2,25 @@
 
 #region Position State machine
 
-switch (Player.CombatState)
+	switch (Player.CombatState)
 {
 	case "Passive": PositionState = "Passive"; break;	
 	case "In Combat": PositionState = "Combat"; break;
 	
 }
+	
+		//Room Collision
+		//Room = collision_point(Player.x,Player.y,obj_RoomCamera,false,true);
+		var Rooms = ds_list_create();
+		RoomTo = collision_point_list(Player.x,Player.y,obj_RoomCamera,false,true,Rooms,true);
+		
+		Room = Rooms[| 0];
+		if (RoomTo > 0) {PositionState = "Room";}
+		
+		//Room inside Room
 
+
+		
 #endregion
 
 
@@ -28,7 +40,7 @@ switch(PositionState)
 		break;
 		}
 	case "Combat": 
-	{
+		{
 		
 		var NearestEnemy = instance_nearest(Player.x,Player.y,ENEMY);
 		
@@ -37,11 +49,36 @@ switch(PositionState)
 		
 	break;
 	}
+	case "Room":
+		{
+			
+			PositionX = Room.x; PositionY = Room.y;
+			
+			if (Player.CombatState == "In Combat")
+			{
+				var NearestEnemy = instance_nearest(Player.x,Player.y,ENEMY);
+				if (!place_meeting(NearestEnemy.x,NearestEnemy.y,Room))
+				{
+				PositionState = "World";
+				PositionX = (Player.x + NearestEnemy.x) / 2; PositionY = (Player.y + NearestEnemy.y) / 2;
+				}
+			}
+			if (Player.CurrentState == "Inventory Mode") 
+			{
+			PositionState = "World";
+			PositionX = Player.x + 40; PositionY = Player.y;
+			}
+
+			
+			
+			
+		break;
+		}
 }
 
 x = PositionX;
 y = PositionY;
 
 //Show camera position when in developer mode.
-if (Player.DEBUG_SHOW) {image_alpha=0.75;}
+if (global.DEBUG_SHOW) {image_alpha=0.50;}
 else {image_alpha=0;}

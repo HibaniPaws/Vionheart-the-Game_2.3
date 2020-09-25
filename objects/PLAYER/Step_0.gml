@@ -108,7 +108,6 @@ switch (OnTile)
 
 #region States
 	
-
 	
 	//Check movement
 	if (MoveX == 0) || (MoveY == 0)
@@ -159,8 +158,8 @@ switch (OnTile)
 	
 	#region Default Music Variables
 	PassiveTheme = global.BGMusic;
-	InventoryTheme = Tem_VTG___Cave_Theme;
-	CombatTheme = Genus_boss_battle_1;
+	InventoryTheme = Genus_video_game_music_2;
+	CombatTheme = Genus_boss_battle_music_16_bit;
 	#endregion
 	
 		if (CombatState == "Passive")
@@ -198,8 +197,9 @@ if (DEVELOPER_MODE)
 	
 	
 	if (keyboard_check_pressed(vk_f1)) {CombatAlert=!CombatAlert};
-
-	if (keyboard_check_pressed(vk_f3)) {DEBUG_SHOW = !DEBUG_SHOW};
+	DEBUG_SHOW = global.DEBUG_SHOW;
+	
+	if (keyboard_check_pressed(vk_backspace)) {room_restart();}
 	if (keyboard_check_pressed(vk_f3)) {DEBUG_MENU = !DEBUG_MENU}; //Not used
 
 }
